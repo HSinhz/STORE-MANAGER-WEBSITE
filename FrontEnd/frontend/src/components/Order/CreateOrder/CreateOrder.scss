@@ -1,0 +1,28 @@
+.backgroud{
+    background-color: rgb(255, 255, 255);
+    .container {
+        .form-create{
+            margin-top: 40px;
+            border: 2px solid #a1cdfb; /* Màu xanh dương */
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Box-shadow bên phải và dưới */
+            padding: 20px; /* Tùy chỉnh khoảng cách nếu cần */
+            .line-header {
+                height: 2px;
+                background-color:#74b6fd    ;
+            }
+            .form-create-order {
+                margin-top: 24px;
+                .p-price-product{
+                    line-height: 40px;
+                    font-size: 18px;
+                }
+                .btn-group {
+                    padding: 12px ;
+                }
+            }
+
+        }
+
+    }
+}
+

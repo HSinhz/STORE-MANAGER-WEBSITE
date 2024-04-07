@@ -1,0 +1,37 @@
+.login-container {
+    margin-top: 60px;
+    .form-login {
+        padding: 24px 12px;
+        margin-top: 120px;
+        .btn-primary {
+            width: 100%;
+        }
+        
+        .forgot-pass{
+            font-size: 12px;
+            text-decoration:  none;
+        }
+        .btn-register{
+            font-size: 12px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 120px;
+            height: 32px;
+            background-color: rgb(42, 142, 42);
+            border-radius: 6px;
+    
+        }
+        .btn-register:hover{
+            background-color:  rgb(41, 121, 41);
+        }
+        .btn-register a
+        {  
+            color: #fff;
+            line-height: 30px;
+            text-decoration:  none;
+        }
+    }
+}
+
+
+

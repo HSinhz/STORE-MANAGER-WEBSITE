@@ -1,0 +1,37 @@
+const createProduct = async( Name, Price, ImageUrl, Description, ShopId) => {
+    try {
+        let data = {};
+        let existShopOwner = await ShopOwner.findOne({Email: Email});
+        if( existShopOwner ){
+            let existShopOwnerCategory = await Category.findOne({ShopId: existShopOwner._id, _id:CategoryId});
+            if( existShopOwnerCategory){
+                await Product({
+                    ShopId: existShopOwner._id,
+                    CategoryId: CategoryId,
+                    Name: Name,
+                    Price: Price,
+                    ImageUrl: ImageUrl,
+                    Description: Description
+                }).save().then(() => 
+                    console.log(`Successfully create product for the shop ${existShopOwner.Shop_Name}`,
+                    data = {
+                        Success: true,
+                        Mess: 'Successfully Product for Shop'
+                    }
+                ))
+            } else {
+                data = {
+                    Success: false,
+                    Mess: 'The store has not yet established a product category'
+                }
+            }
+        }
+        return data;
+    } catch ( error ){
+        console.log(error)
+        return {
+            Success: false,
+            Mess: 'Error from server'
+        }
+    }
+}
